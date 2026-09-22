@@ -5,9 +5,19 @@
 
 generator client {
   provider = "prisma-client"
-  output   = "../generated/prisma"
+  output   = "../src/generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
+}
+
+
+model Producto {
+id Int @id @default(autoincrement())
+nombre String
+precio Float
+categoria String
+fotoBase64 String? // ¡La clave para las fotos de la cámara!
+createdAt DateTime @default(now())
 }
