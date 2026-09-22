@@ -4,7 +4,7 @@ const app=express();
 
 const PUERTO=3001;
 
-app.use(express.json());
+app.use(express.json({limit:'10mb'}));
 //app.use("/albumes",albumesRouter)
 //app.use("/canciones",cancionesRouter)
 
