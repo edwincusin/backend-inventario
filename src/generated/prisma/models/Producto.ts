@@ -42,6 +42,7 @@ export type ProductoMinAggregateOutputType = {
   precio: number | null
   categoria: string | null
   fotoBase64: string | null
+  codigoBarras: string | null
   createdAt: Date | null
 }
 
@@ -51,6 +52,7 @@ export type ProductoMaxAggregateOutputType = {
   precio: number | null
   categoria: string | null
   fotoBase64: string | null
+  codigoBarras: string | null
   createdAt: Date | null
 }
 
@@ -60,6 +62,7 @@ export type ProductoCountAggregateOutputType = {
   precio: number
   categoria: number
   fotoBase64: number
+  codigoBarras: number
   createdAt: number
   _all: number
 }
@@ -81,6 +84,7 @@ export type ProductoMinAggregateInputType = {
   precio?: true
   categoria?: true
   fotoBase64?: true
+  codigoBarras?: true
   createdAt?: true
 }
 
@@ -90,6 +94,7 @@ export type ProductoMaxAggregateInputType = {
   precio?: true
   categoria?: true
   fotoBase64?: true
+  codigoBarras?: true
   createdAt?: true
 }
 
@@ -99,6 +104,7 @@ export type ProductoCountAggregateInputType = {
   precio?: true
   categoria?: true
   fotoBase64?: true
+  codigoBarras?: true
   createdAt?: true
   _all?: true
 }
@@ -195,6 +201,7 @@ export type ProductoGroupByOutputType = {
   precio: number
   categoria: string
   fotoBase64: string | null
+  codigoBarras: string | null
   createdAt: Date
   _count: ProductoCountAggregateOutputType | null
   _avg: ProductoAvgAggregateOutputType | null
@@ -227,6 +234,7 @@ export type ProductoWhereInput = {
   precio?: Prisma.FloatFilter<"Producto"> | number
   categoria?: Prisma.StringFilter<"Producto"> | string
   fotoBase64?: Prisma.StringNullableFilter<"Producto"> | string | null
+  codigoBarras?: Prisma.StringNullableFilter<"Producto"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Producto"> | Date | string
 }
 
@@ -236,6 +244,7 @@ export type ProductoOrderByWithRelationInput = {
   precio?: Prisma.SortOrder
   categoria?: Prisma.SortOrder
   fotoBase64?: Prisma.SortOrderInput | Prisma.SortOrder
+  codigoBarras?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
 }
 
@@ -248,6 +257,7 @@ export type ProductoWhereUniqueInput = Prisma.AtLeast<{
   precio?: Prisma.FloatFilter<"Producto"> | number
   categoria?: Prisma.StringFilter<"Producto"> | string
   fotoBase64?: Prisma.StringNullableFilter<"Producto"> | string | null
+  codigoBarras?: Prisma.StringNullableFilter<"Producto"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Producto"> | Date | string
 }, "id">
 
@@ -257,6 +267,7 @@ export type ProductoOrderByWithAggregationInput = {
   precio?: Prisma.SortOrder
   categoria?: Prisma.SortOrder
   fotoBase64?: Prisma.SortOrderInput | Prisma.SortOrder
+  codigoBarras?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   _count?: Prisma.ProductoCountOrderByAggregateInput
   _avg?: Prisma.ProductoAvgOrderByAggregateInput
@@ -274,6 +285,7 @@ export type ProductoScalarWhereWithAggregatesInput = {
   precio?: Prisma.FloatWithAggregatesFilter<"Producto"> | number
   categoria?: Prisma.StringWithAggregatesFilter<"Producto"> | string
   fotoBase64?: Prisma.StringNullableWithAggregatesFilter<"Producto"> | string | null
+  codigoBarras?: Prisma.StringNullableWithAggregatesFilter<"Producto"> | string | null
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Producto"> | Date | string
 }
 
@@ -282,6 +294,7 @@ export type ProductoCreateInput = {
   precio: number
   categoria: string
   fotoBase64?: string | null
+  codigoBarras?: string | null
   createdAt?: Date | string
 }
 
@@ -291,6 +304,7 @@ export type ProductoUncheckedCreateInput = {
   precio: number
   categoria: string
   fotoBase64?: string | null
+  codigoBarras?: string | null
   createdAt?: Date | string
 }
 
@@ -299,6 +313,7 @@ export type ProductoUpdateInput = {
   precio?: Prisma.FloatFieldUpdateOperationsInput | number
   categoria?: Prisma.StringFieldUpdateOperationsInput | string
   fotoBase64?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoBarras?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
@@ -308,6 +323,7 @@ export type ProductoUncheckedUpdateInput = {
   precio?: Prisma.FloatFieldUpdateOperationsInput | number
   categoria?: Prisma.StringFieldUpdateOperationsInput | string
   fotoBase64?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoBarras?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
@@ -317,6 +333,7 @@ export type ProductoCreateManyInput = {
   precio: number
   categoria: string
   fotoBase64?: string | null
+  codigoBarras?: string | null
   createdAt?: Date | string
 }
 
@@ -325,6 +342,7 @@ export type ProductoUpdateManyMutationInput = {
   precio?: Prisma.FloatFieldUpdateOperationsInput | number
   categoria?: Prisma.StringFieldUpdateOperationsInput | string
   fotoBase64?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoBarras?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
@@ -334,6 +352,7 @@ export type ProductoUncheckedUpdateManyInput = {
   precio?: Prisma.FloatFieldUpdateOperationsInput | number
   categoria?: Prisma.StringFieldUpdateOperationsInput | string
   fotoBase64?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  codigoBarras?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
@@ -343,6 +362,7 @@ export type ProductoCountOrderByAggregateInput = {
   precio?: Prisma.SortOrder
   categoria?: Prisma.SortOrder
   fotoBase64?: Prisma.SortOrder
+  codigoBarras?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
 }
 
@@ -357,6 +377,7 @@ export type ProductoMaxOrderByAggregateInput = {
   precio?: Prisma.SortOrder
   categoria?: Prisma.SortOrder
   fotoBase64?: Prisma.SortOrder
+  codigoBarras?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
 }
 
@@ -366,6 +387,7 @@ export type ProductoMinOrderByAggregateInput = {
   precio?: Prisma.SortOrder
   categoria?: Prisma.SortOrder
   fotoBase64?: Prisma.SortOrder
+  codigoBarras?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
 }
 
@@ -410,6 +432,7 @@ export type ProductoSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs
   precio?: boolean
   categoria?: boolean
   fotoBase64?: boolean
+  codigoBarras?: boolean
   createdAt?: boolean
 }, ExtArgs["result"]["producto"]>
 
@@ -419,6 +442,7 @@ export type ProductoSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exte
   precio?: boolean
   categoria?: boolean
   fotoBase64?: boolean
+  codigoBarras?: boolean
   createdAt?: boolean
 }, ExtArgs["result"]["producto"]>
 
@@ -428,6 +452,7 @@ export type ProductoSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exte
   precio?: boolean
   categoria?: boolean
   fotoBase64?: boolean
+  codigoBarras?: boolean
   createdAt?: boolean
 }, ExtArgs["result"]["producto"]>
 
@@ -437,10 +462,11 @@ export type ProductoSelectScalar = {
   precio?: boolean
   categoria?: boolean
   fotoBase64?: boolean
+  codigoBarras?: boolean
   createdAt?: boolean
 }
 
-export type ProductoOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "nombre" | "precio" | "categoria" | "fotoBase64" | "createdAt", ExtArgs["result"]["producto"]>
+export type ProductoOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "nombre" | "precio" | "categoria" | "fotoBase64" | "codigoBarras" | "createdAt", ExtArgs["result"]["producto"]>
 
 export type $ProductoPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Producto"
@@ -451,6 +477,7 @@ export type $ProductoPayload<ExtArgs extends runtime.Types.Extensions.InternalAr
     precio: number
     categoria: string
     fotoBase64: string | null
+    codigoBarras: string | null
     createdAt: Date
   }, ExtArgs["result"]["producto"]>
   composites: {}
@@ -880,6 +907,7 @@ export interface ProductoFieldRefs {
   readonly precio: Prisma.FieldRef<"Producto", 'Float'>
   readonly categoria: Prisma.FieldRef<"Producto", 'String'>
   readonly fotoBase64: Prisma.FieldRef<"Producto", 'String'>
+  readonly codigoBarras: Prisma.FieldRef<"Producto", 'String'>
   readonly createdAt: Prisma.FieldRef<"Producto", 'DateTime'>
 }
     

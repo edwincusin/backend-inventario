@@ -21,7 +21,7 @@ export const getProductos = async (req: Request, res: Response) => {
 // ============================================
 export const createProducto = async (req: Request, res: Response) => {
     try {
-        const { nombre, precio, categoria, fotoBase64 } = req.body;
+        const { nombre, precio, categoria, fotoBase64,  codigoBarras} = req.body;
 
         if (!nombre || precio === undefined || !categoria) {
             return res.status(400).json({
@@ -41,6 +41,7 @@ export const createProducto = async (req: Request, res: Response) => {
                 precio,
                 categoria,
                 fotoBase64: fotoBase64 ?? null,
+                codigoBarras,
             },
         });
 

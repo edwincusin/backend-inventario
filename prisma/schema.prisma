@@ -19,5 +19,6 @@ nombre String
 precio Float
 categoria String
 fotoBase64 String? // ¡La clave para las fotos de la cámara!
+codigoBarras  String?
 createdAt DateTime @default(now())
 }

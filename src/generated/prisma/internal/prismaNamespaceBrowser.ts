@@ -76,6 +76,7 @@ export const ProductoScalarFieldEnum = {
   precio: 'precio',
   categoria: 'categoria',
   fotoBase64: 'fotoBase64',
+  codigoBarras: 'codigoBarras',
   createdAt: 'createdAt'
 } as const
 
